@@ -1,0 +1,181 @@
+
+Avoid doubly nested if statements
+if you can.
+
+With a few simple method
+extractions, some renaming,
+and some restructuring.
+
+You may not understand all the details
+but still understand the basic
+idea.
+
+---
+Table of contents
+---
+
+Small
+
+Blocks and indenting
+
+Do one thing
+
+One level of abstraction per function
+
+Reading code from top to bottom
+
+Switch statements
+
+Use descriptive names
+
+Common Monadic Forms
+
+Flag arguments
+
+Dyadic Functions
+
+
+
+--------------
+
+Small
+
+  The first rule of functions
+  is that they should be small.
+
+  Second rule is that they
+  should be smaller than that.
+
+  Functions should be VERY small.
+
+  They should hardly ever be 20 lines long.
+
+  Each should be transparent and obvious.
+  Each told a story.
+
+  2-5 lines would be great
+  if possible
+
+Blocks and indenting
+
+  Functions should not be large enough
+  to hold nested structures.
+
+  The level the indenting should
+  not be greater than one or two.
+
+  Making the function easier to read
+  and understand.
+
+Do one thing
+
+  Functions should do one thing.
+  They should do it well.
+  They should do it only.
+
+  What is the ONE THING that the
+  function does?
+
+
+  Functions that do one thing cannot
+  be reasonably divided into sections.
+
+One level of abstraction per function
+
+Reading code from top to bottom
+
+  Every function to be followed
+  by those at the next level of abstraction.
+
+  Like subsequent TO paragraphs.
+
+  Difficult to write functions that stay
+  at a single level of abstraction.
+
+Switch statements
+
+  It's hard to make small switch
+  statements.
+
+  Instead use polymorphism.
+
+  As switch statements tend to grow.
+
+  Often violate
+  the Single Responsibility Principle
+  and
+  Open Closed Principle
+
+  // in SOLID principles
+
+  Switch statements can be tolerated
+  if they appear only once,
+  are used to create polymorphic
+  objects, and are hidden
+  behind an inheritance relationship
+  so that the rest of the system
+  can't see it.
+
+Use descriptive names
+
+  Don't be afraid to make a name long.
+
+  It's better to have a long descriptive name
+  than a long descriptive comment.
+
+  You should try several different names
+  and read the code with each in place.
+
+  Hunting for good names results
+  in favorable restructuring
+  of the code.
+
+  Be consistent in your names.
+
+Function arguments
+
+  The ideal number of arguments
+  for a function is zero.
+  Next is one.
+
+  Then two.
+
+  etc.
+
+  More than three requires
+  special justification and then
+  shouldn't be used anyway.
+
+  Argument are even harder
+  from a testing point of view.
+
+  All the test cases to consider
+  all the edge cases and combinations.
+
+Common Monadic Forms
+
+Flag arguments
+
+  Passing a boolean into a function
+  is bad practice.
+
+  It complicates the signature
+  of the method.
+
+  Proclaims that this function
+  does more than one thing.
+
+Dyadic Functions
+
+  A function with two arguments is
+  harder to understand.
+
+  NOTE: The parts of the code
+  that we ignore are where the
+  bugs will hide.
+
+  assertEquals(expected, actual)
+  // can be problematic
+  // as easy to pass in different order
+
+Triads 

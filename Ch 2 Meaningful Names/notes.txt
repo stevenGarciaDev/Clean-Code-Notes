@@ -1,0 +1,225 @@
+Table of contents
+---
+
+Introduction
+
+Use intention-revealing names
+
+Avoid Disinformation
+
+Make meaningful distinctions
+
+Use Pronounceable names
+
+Use searchable names
+
+Avoid Encodings
+
+Hungarian Notation
+
+Member prefixes
+
+Interfaces and Implementations
+
+Avoid Mental Mapping
+
+Class names
+
+Method names
+
+Pick one word per concept
+
+Use Solution Domain names
+
+Add meaningful context
+
+Don't add gratuitous context
+
+
+---
+
+Introduction
+
+  Names are everywhere in software.
+
+  Variables, functions, arguments, classes,
+  and packages.
+
+  Source files, directories, etc.
+
+  Better do it good.
+
+Use intention-revealing names
+
+  Names should reveal intent.
+
+  Choosing good names takes time
+  but saves more than it takes.
+
+  So take care with your names and
+  change them when you find better ones.
+
+  Everyone who reads your code
+  will be happier if you do.
+
+
+  The name should answer all the big questions.
+
+    - why it exists
+    - what it directories
+    - how it is used
+
+  If a name requires a comment
+  then the name does not reveal its intent.
+
+  Ex:
+
+    int elapsedTimeInDays;
+    int daysSinceCreation.
+    int daysSinceModification
+    int fileAgeInDays;
+
+  Good names make it easier to understand
+  and change code.
+
+  Code must be explicit in its intent.
+
+  Clarity.
+
+Avoid Disinformation
+
+  accountList could be misleading
+  if it is not a list data type.
+
+  Beware of names that vary in small ways.
+
+Make meaningful distinctions
+
+  Programmers create problems for
+  themselves when they write code
+  soley to satisfy the compiler
+  or interpreter.
+
+  Avoid 'noise'
+  such as
+
+  ProductInfo
+  or
+  ProductData.
+
+  Prefix conventions are fine like
+  a or the
+  so long as they make meaningful
+  distinctions.
+
+  Noise words are redundant.
+
+  nameStr
+  is not better than
+  name
+
+  customerInfo
+  is not better than
+  customer
+
+Use Pronounceable names
+
+  Programming is a social activity.
+
+Use searchable names
+
+  Single letter names are ONLY
+  to be used as local variables inside
+  short methods.
+
+  Such as a for loop.
+
+Avoid Encodings
+
+Hungarian Notation
+
+  Avoid adding the data type
+  to the variable/reference name.
+
+Member prefixes
+
+  Don't need to prefix member
+  variables with m_ anymore.
+
+  Your classes and functions should
+  be small enough that you don't
+  need them.
+
+  // editor should colorize them
+  // to make then distinct
+
+Interfaces and Implementations
+
+Avoid Mental Mapping
+
+  Clarity is kind.
+
+  Write code that others can
+  understand.
+
+Class names
+
+  A class name is not a verb.
+
+  It's a noun.
+
+Method names
+
+  A verb.
+
+  ex:
+
+    postPayment;
+
+    deletePage
+
+  getters and setters
+
+  When constructors are overloaded,
+  use static factory methods with names
+  that describe the arguments.
+
+  Ex:
+
+    Complex fulcrumPoint = Complex.FromReadNumber(23.0);
+
+  compared to
+
+    Complex fulcrumPoint = new Complex(23.0);
+
+
+  Consider enforcing their use by making
+  the corresponding constructors private.
+
+Pick one word per concept
+
+  Pick one word for an abstract
+  concept and stick to it.
+
+  fetch, retrieve, and get
+  can become confusing to
+  differentiate.
+
+  Our goal as authors is to make
+  our code as easy as possible to
+  understand.
+
+  We want our code to be a quick
+  skim, not an intense study.
+
+Use Solution Domain names
+
+Add meaningful context
+
+  Group together related variables
+  and methods into a class.
+
+Don't add gratuitous context
+
+  Shorter names are generally
+  better than longer ones.

@@ -1,0 +1,331 @@
+Clean Code Notes
+A Handbook of Agile Software Craftsmanship
+book by Robert C. Martin
+aka "Uncle Bob"
+
+----
+Table of contents
+---
+
+Introduction
+
+There will be code
+
+Bad code
+
+The total cost of owning a mess
+
+The Grand Redesign in the sky
+
+Attitude
+
+The Primal Conundrum
+
+The art of clean code
+
+What is clean code?
+
+We are authors
+
+The Boy Scout rule
+
+
+/* --------------------
+
+Introduction
+
+  Valid measurement of code quality
+  is WTF/minute.
+
+  Two parts to learning craftsmanship.
+    => knowledge and work
+
+  Principles, patterns, best practices, etc.
+
+  Grind that knowledge into your fingers,
+  eyes, and gut by working hard and practicing.
+
+  Learning to write clean code is hard work.
+
+  More than just knowledge, you have to sweat over it.
+
+  Must practice and fail.
+
+There will be code
+
+  Code represents the details of the requirements.
+
+  Cannot be ignored or abstracted
+  as they need to be specified.
+
+  Specification is code.
+
+  Higher levels of abstraction and more
+  domain-specific languages will grow.
+
+  There will always be code.
+
+Bad Code
+
+  Good code matters as they help
+  and support the business.
+
+  Bad code hurts the company
+  especially as more features are added.
+
+  Wading through bad code trying to find
+  out what is going on.
+
+  Why?
+
+    - in a rush?
+    - lack of detail?
+    - backlog to complete?
+
+  LeBlanc's law: Later equals never
+
+The total cost of owning a mess
+
+  You are slowed down by someone else's
+  messy code.
+
+  Moving at a snail pace.
+
+  Tight coupling leads to every change
+  breaking two or three parts of the code.
+
+  No change is trivial.
+
+  Spaghetti code and no way out.
+
+  Productivity decreases, approaching 0.
+
+  More staff added to the project,
+  not understanding the complexity of the system
+  slow down even more.
+
+  Under pressure to increase Productivity.
+
+The Grand Redesign in the sky
+
+  Team demands a redesign.
+
+  Green field project.
+
+  Tiger team selected; only the best.
+
+  Rest of team must maintain the current
+  system.
+
+  Two teams are in a race.
+
+  Tiger team must build a new system
+  that does everything the old system does.
+
+  Also keep up with the changes
+  which are continuously made
+  the old system.
+
+  Management won't replace the old
+  system until the new system can do
+  everything that the old system can do.
+
+  Race goes on for a long time.
+  // sometimes 10 years
+  and the original tiger team
+  are long gone.
+
+  New members are demanding a system
+  redesign.
+
+Attitude
+
+  Took weeks what should have taken hours.
+
+  What should have been one-line change
+  instead in hundreds of different
+  modules.
+
+  Why does this happen to code?
+
+  Why does good code rot so quickly
+  into bad code?
+
+  - requirements change
+  - tight schedules
+
+  NO.
+
+  It's your job to defend the code
+  with equal passion.
+
+  // doctors should refuse to comply
+  // for patient's best interest
+
+The Primal Conundrum
+
+  All developers feel pressure to
+  make messes in order to meet deadlines.
+
+  They don't take the time to go fast.
+
+  You will not make the deadline
+  by making a mess.
+
+  A mess will slow you down and
+  force you to miss the deadline.
+
+  Only way to make the deadline,
+  is go fast and keep the code
+  as clean as possible at all times.
+
+The art of clean code
+
+  Writing clean code is like painting a picture.
+
+  Recognizing is not the same as knowing
+  how to do it.
+
+  Requires a discipline use of little
+  techniques applied
+  painstaking.
+
+What is clean code?
+
+  Elegant.
+
+  Pleasing to read.
+
+  Efficiency.
+
+  Bad code temps the mess to grow.
+
+  When others change bad code, they
+  tend to make it worse.
+
+  Dave Thomas and Andy Hunt describe as
+  broken windows. People stop caring
+  about the building.
+
+  Graffiti, garbage, decay, etc.
+
+  Should pay close attention to detail.
+
+  Clean code does one thing well.
+
+  It is focused.
+
+  Bad code tries to do too much.
+  // ambiguity of purpose
+
+  Each function, each class, each module
+  exposes a clean single-minded attitude.
+
+  -
+
+  Readability.
+
+  Well-written prose.
+
+  Provide a clear and minimal API.
+
+  Make it easy for other people to enhance it.
+
+  There's a difference between
+  code that's easy to read and code
+  that's easy to change.
+
+  Cleanliness to tests.
+
+  TDD is a fundamental discipline.
+
+  Code without tests is NOT CLEAN.
+
+  Minimal code.
+  Smaller is better.
+
+  Clean code is code that has been taken care of.
+
+  Someone has taken the time to keep it
+  simple and orderly.
+
+  They have paid appropriate attention to detail.
+
+  They have cared.
+
+  * runs all the tests
+
+  * contains no duplication
+
+  * expresses all the design ideas
+  that are in the system
+
+  * minimizes the number of entities
+  such as classes, methods, functions, etc.
+
+  Duplication means not well thought out.
+
+  Expressiveness through meaningful names.
+
+  Change the name of things several times
+  before I settle in.
+
+  Sign of clean code is when each function
+  turns out to be pretty much
+  what you expected.
+
+  Makes it look like the language
+  was made for the problem.
+
+  You read, you nod your head,
+  then go on to the next topic.
+
+  So obvious, that it doesn't register
+  as profound.
+
+  You should not be surprised at the
+  implementation.
+
+  So profoundly well written
+  that you don't even notice.
+
+  Ridiculously simple.
+
+We are authors
+
+  The ratio of time spend reading
+  vs writing is well over 10:1.
+
+  We are constantly reading
+  old code as part of the effort
+  to write new code.
+
+  We want reading code to be easy so
+  making it easy to read makes it
+  easier to write.
+
+  You cannot write code if you cannot
+  read the surrounding code.
+
+The Boy Scout rule
+
+  Leave the campground cleaner
+  than you found it.
+
+  It's not enough to write code well.
+  Must be kept clean over time.
+
+  Code can rot and degrade as time passes
+  so must take an active role in
+  preventing this degradation.
+
+  Check in your code a little cleaner
+  than when you checked it out.
+
+  Imagine if code simply got better
+  as time passes.
+
+  Continuous improvement is
+  an intrinsic part of professionalism.
+
+Prequal and Principles
