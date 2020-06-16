@@ -34,7 +34,31 @@ Flag arguments
 
 Dyadic Functions
 
+Argument Objects
 
+Argument Lists
+
+Verbs and keywords
+
+Have no side effects
+
+Output Arguments
+
+Command Query Separation
+
+Prefer Exceptions to returning error codes
+
+Extract Try/Catch blocks
+
+Error Handling is one thing
+
+The Error.java Dependency magnet
+
+Don't Repeat Yourself
+
+Structured Programming
+
+How do you write functions like that?
 
 --------------
 
@@ -178,4 +202,254 @@ Dyadic Functions
   // can be problematic
   // as easy to pass in different order
 
-Triads 
+Triads
+
+  3 arguments are significantly
+  harder to understand.
+
+  The issues of ordering, pausing,
+  etc.
+
+  Think carefully before specifying
+  three parameters.
+
+  Consider
+
+  assertEquals(message, expected, actual)
+
+Argument Objects
+
+  When a function seems to need
+  more than two or three arguments,
+  often means
+  that the arguments ought
+  to be wrapped in a class
+  of their own.
+
+  Ex:
+
+    Circle makeCircle(double x, double y, double radius);
+
+    into
+
+    Circle makeCircle(Point center, double radius);
+
+  Group variables that are related together.
+
+Argument Lists
+
+  Sometime want to pass a variable
+  number of arguments into a function.
+
+
+  String.format method
+
+  // utilize a List for example
+
+Verbs and keywords
+
+  Choosing good name for a function
+  can go a long way toward explaining
+  the intent of the function, the order,
+  and the intent of the arguments.
+
+  Consider having the parameter names
+  listed in the function name.
+
+  Ex:
+
+    assertEquals(expected, actual)
+
+    into
+
+    assertExpectedEqualsActual(expected, actual)
+
+Have no side effects
+
+  Side effects are lies.
+
+  Your function promises to do one thing
+  but it also does other hidden things.
+
+  Sometimes unexpected changes to variables
+  of its own class.
+
+  Look at the name of the method.
+  Think
+    -> does every line in the method
+      relevant and
+      easily implied through
+      the function name.
+
+  Side effects creates temporal
+  coupling.
+
+  These are confusing as they are
+  hidden side effects.
+
+  Instead make it clear in the name
+  of the function.
+
+  => DO ONE THING in a function
+
+
+Output Arguments
+
+  Arguments are often thought of
+  as the inputs to a function.
+
+  Sometimes they act as the output.
+
+  // consider references or the explicit,
+  // ref and out keywords in C#
+
+  Anything that forces you to check
+  the function signature
+  is equivalent to a double-take.
+
+  It's a cognitive break and
+  should be avoided.
+
+  With OOP, this really should be avoided.
+
+  Output arguments should be avoided.
+
+  If your function must change
+  the state of something,
+  have it change the state of its
+  own object.
+
+Command Query Separation
+
+  Functions should either do something
+  or answer something.
+
+  But not both as that often leads
+  to confusion.
+
+Prefer Exceptions to returning error codes
+
+  Subtle violation of command query separation.
+
+  Problem is that it leads to deeply
+  nested structures.
+
+  When you return an error code,
+  the caller must deal with the error
+  immediately.
+
+  Instead use exceptions,
+  so that the error processing code
+  can be separated from the happy path
+  code and can be simplified.
+
+Extract Try/Catch blocks
+
+  Ugly coding practice.
+
+  Confuse and mix error processing
+  with normal processing.
+
+  Better to extract the bodies
+  of the try and catch blocks
+  into functions of their own.
+
+Error Handling is one thing
+
+  Functions should do one thing.
+
+  Error handling is one thing.
+
+  Thus a function that handles
+  errors should do nothing else.
+
+  So if the keyword try
+  exists in the function,
+  it should be the very first word
+  in the function.
+
+  And that there should be nothing
+  after the catch/finally blocks.
+
+The Error.java Dependency magnet
+
+  Problem with Dependency magnets
+  is that when an enum (or part of it) changes,
+  all those other classes need to
+  be recompiled and redeployed.
+
+  When you use exceptions rather than
+  error codes, then new exceptions
+  are derivatives of the exception
+  class.
+
+Don't Repeat Yourself
+
+  It's not always easy to spot
+  duplication.
+
+  Still it's a problem as it bloats
+  the code and will require multiple
+  areas of modification should
+  the algorithm ever have to change.
+
+  Readability is enhanced by the
+  reduction of that duplication.
+
+  Duplication may be the root of
+  all evil in software.
+
+Structured Programming
+
+  For large functions, consider the practice
+  of no break or continue statements
+  in a loop, only one
+  return statement in a function
+
+  If you keep your functions small,
+  then the occasional multiple
+  return, break, or continue statement
+  does no harm.
+
+  It can sometimes be more expressive than
+  the single-entry, single-exit rule.
+
+How do you write functions like that?
+
+  Writing software is like any other
+  kind of writing.
+
+  The first draft is clumsy and disorganized.
+
+  You restructure it and refine it until
+  it reads the way you want it to read.
+
+  When you first write functions, they
+  come out long and complicated.
+
+  Lots of indenting and nested loops,
+  long argument lists,
+  arbitrary names, and duplicated code.
+
+  But have a suite of unit tests that
+  cover every one of those clumsy lines
+  of code.
+
+  Then refine the code, splitting out functions,
+  changing names, eliminating duplication.
+
+  Shrink the methods and reorder them.
+
+  Sometimes break out whole classes,
+  all while keeping the tests passing.
+
+  You don't write clean code from the start.
+
+
+  Your functions will be
+  short, well named, and nicely organized.
+
+  Remember your real goal is to tell
+  the story of the system.
+
+  
